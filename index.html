@@ -90,8 +90,26 @@
        ================================================ -->
   <nav class="navbar" id="navbar">
     <div class="nav-inner">
-      <a href="#hero" class="nav-logo">
-        <span class="logo-sp">SP</span><span class="logo-dj">DigitalJourney</span>
+      <a href="#hero" class="nav-logo" aria-label="SPDigitalJourney Home">
+        <svg class="nav-logo-svg" viewBox="0 0 240 44" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <defs>
+            <linearGradient id="nlg" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#1A56DB"/>
+              <stop offset="100%" stop-color="#0F3BA8"/>
+            </linearGradient>
+          </defs>
+          <ellipse cx="20" cy="17" rx="13" ry="13" fill="url(#nlg)"/>
+          <polygon points="20,34 14,25 26,25" fill="url(#nlg)"/>
+          <ellipse cx="20" cy="17" rx="8.5" ry="8.5" fill="white"/>
+          <path d="M20 9.5 A7.5 7.5 0 0 1 27.5 21" stroke="#4285F4" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+          <path d="M20 9.5 A7.5 7.5 0 0 0 12.5 17" stroke="#EA4335" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+          <path d="M12.5 17 A7.5 7.5 0 0 0 27.5 21" stroke="#FBBC05" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+          <line x1="22.5" y1="17" x2="28.5" y2="17" stroke="#34A853" stroke-width="2.4" stroke-linecap="round"/>
+          <ellipse cx="20" cy="17" rx="15" ry="15" fill="none" stroke="#F4A012" stroke-width="1.2" stroke-dasharray="4 3" opacity="0.65"/>
+          <text x="42" y="15" font-family="Syne,Arial Black,sans-serif" font-size="14" font-weight="800" fill="#F4A012">SP</text>
+          <text x="60" y="15" font-family="Syne,Arial,sans-serif" font-size="14" font-weight="700" fill="white">DigitalJourney</text>
+          <text x="42" y="30" font-family="DM Sans,Arial,sans-serif" font-size="8" font-weight="400" fill="rgba(255,255,255,0.55)" letter-spacing="1.5">SINCE 2007 · MSME</text>
+        </svg>
       </a>
       <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
         <span></span><span></span><span></span>
@@ -108,69 +126,248 @@
   </nav>
 
   <!-- ================================================
-       HERO SECTION
-       Hero with bold headline, stats, and Call Now CTA
+       HERO SECTION — SVG Illustrated Full-Width Hero
+       Left: headline, stats, CTAs
+       Right: India map with Google pin clusters
        ================================================ -->
   <section class="hero" id="hero">
-    <div class="hero-bg-grid"></div>
-    <div class="hero-content">
-      <!-- Logo / Brand badge -->
-      <div class="hero-badge">
-        <span class="badge-dot"></span>
-        Govt. Registered MSME · UDYAM-KR-02-0117946
-      </div>
 
-      <h1 class="hero-title">
-        Bridging Businesses<br />
-        <span class="hero-accent">&amp; Google</span><br />
-        Since 2007
-      </h1>
+    <!-- ── HERO SVG ILLUSTRATION (full background) ── -->
+    <div class="hero-illustration" aria-hidden="true">
+      <svg viewBox="0 0 1400 700" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="hBg" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#0F1729"/>
+            <stop offset="55%" stop-color="#1B2B4B"/>
+            <stop offset="100%" stop-color="#2A4080"/>
+          </linearGradient>
+          <linearGradient id="hGlow" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#1A56DB" stop-opacity="0.3"/>
+            <stop offset="100%" stop-color="#1A56DB" stop-opacity="0"/>
+          </linearGradient>
+          <linearGradient id="hGold" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%" stop-color="#F4A012"/>
+            <stop offset="100%" stop-color="#FBBC05"/>
+          </linearGradient>
+          <linearGradient id="hPin" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#1A56DB"/>
+            <stop offset="100%" stop-color="#0A2E8A"/>
+          </linearGradient>
+          <radialGradient id="hOrb" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#1A56DB" stop-opacity="0.22"/>
+            <stop offset="100%" stop-color="#1A56DB" stop-opacity="0"/>
+          </radialGradient>
+        </defs>
 
-      <p class="hero-subtitle">
-        Founded by <strong>Sanjay Paul</strong> — Ex-Google Maps India Division (2007 Pilot Batch).<br />
-        We help businesses get <em>found</em>, <em>trusted</em>, and <em>chosen</em> on Google.
-      </p>
+        <!-- Background -->
+        <rect width="1400" height="700" fill="url(#hBg)"/>
 
-      <!-- CTA Buttons -->
-      <div class="hero-ctas">
+        <!-- Grid lines -->
+        <g opacity="0.06" stroke="#5580CC" stroke-width="0.8">
+          <line x1="0" y1="100" x2="1400" y2="100"/><line x1="0" y1="200" x2="1400" y2="200"/>
+          <line x1="0" y1="300" x2="1400" y2="300"/><line x1="0" y1="400" x2="1400" y2="400"/>
+          <line x1="0" y1="500" x2="1400" y2="500"/><line x1="0" y1="600" x2="1400" y2="600"/>
+          <line x1="175" y1="0" x2="175" y2="700"/><line x1="350" y1="0" x2="350" y2="700"/>
+          <line x1="525" y1="0" x2="525" y2="700"/><line x1="700" y1="0" x2="700" y2="700"/>
+          <line x1="875" y1="0" x2="875" y2="700"/><line x1="1050" y1="0" x2="1050" y2="700"/>
+          <line x1="1225" y1="0" x2="1225" y2="700"/>
+        </g>
+
+        <!-- Left glow orb -->
+        <ellipse cx="280" cy="350" rx="380" ry="340" fill="url(#hOrb)"/>
+        <!-- Right subtle glow -->
+        <ellipse cx="1100" cy="350" rx="300" ry="300" fill="url(#hOrb)" opacity="0.5"/>
+
+        <!-- ── INDIA MAP (right half) ── -->
+        <g transform="translate(680, 40) scale(1.7)" opacity="0.22" fill="#1C3A6E" stroke="#4A7DDB" stroke-width="0.8">
+          <path d="M 180 15 Q 210 12 235 28 Q 265 22 282 42 Q 305 46 310 70 Q 328 82 322 108
+                   Q 338 122 330 148 Q 345 166 332 192 Q 340 214 322 238 Q 328 264 308 282
+                   Q 300 308 282 326 Q 268 350 248 368 Q 228 390 205 402
+                   Q 188 414 175 396 Q 158 378 145 360 Q 128 338 120 315
+                   Q 105 292 110 268 Q 96 250 100 228 Q 88 205 94 182
+                   Q 82 158 88 136 Q 78 112 88 92 Q 82 68 94 50
+                   Q 106 28 125 18 Q 150 8 180 15 Z"/>
+          <path d="M 94 50 Q 108 28 132 18 Q 118 36 124 52 Q 108 50 94 50 Z"/>
+          <path d="M 310 70 Q 338 62 352 82 Q 338 96 326 92 Q 318 80 310 70 Z"/>
+          <path d="M 175 396 Q 182 420 175 430 Q 165 418 158 402 Z"/>
+        </g>
+
+        <!-- ── GOOGLE PINS on India map ── -->
+        <!-- Helper macro: each pin group = circle + tail + inner dot -->
+
+        <!-- Bengaluru HQ — LARGE GOLD -->
+        <g transform="translate(936, 488)">
+          <ellipse cx="0" cy="0" rx="28" ry="28" fill="#F4A012" opacity="0.15"/>
+          <ellipse cx="0" cy="-24" rx="22" ry="22" fill="#F4A012"/>
+          <polygon points="0,8 -11,-12 11,-12" fill="#F4A012"/>
+          <ellipse cx="0" cy="-24" rx="9" ry="9" fill="white"/>
+          <ellipse cx="0" cy="10" rx="8" ry="3" fill="#F4A012" opacity="0.2"/>
+          <text x="0" y="36" font-family="DM Sans,Arial,sans-serif" font-size="13" font-weight="700" fill="#F4A012" text-anchor="middle">Bengaluru HQ</text>
+        </g>
+
+        <!-- Mumbai -->
+        <g transform="translate(876, 408)">
+          <ellipse cx="0" cy="-16" rx="15" ry="15" fill="#1A56DB"/>
+          <polygon points="0,4 -7,-8 7,-8" fill="#1A56DB"/>
+          <ellipse cx="0" cy="-16" rx="6" ry="6" fill="white"/>
+          <text x="0" y="20" font-family="DM Sans,Arial,sans-serif" font-size="11" fill="rgba(255,255,255,0.7)" text-anchor="middle">Mumbai</text>
+        </g>
+
+        <!-- Delhi -->
+        <g transform="translate(940, 260)">
+          <ellipse cx="0" cy="-16" rx="15" ry="15" fill="#EA4335"/>
+          <polygon points="0,4 -7,-8 7,-8" fill="#EA4335"/>
+          <ellipse cx="0" cy="-16" rx="6" ry="6" fill="white"/>
+          <text x="0" y="20" font-family="DM Sans,Arial,sans-serif" font-size="11" fill="rgba(255,255,255,0.7)" text-anchor="middle">Delhi</text>
+        </g>
+
+        <!-- Hyderabad -->
+        <g transform="translate(968, 435)">
+          <ellipse cx="0" cy="-14" rx="13" ry="13" fill="#34A853"/>
+          <polygon points="0,3 -6,-7 6,-7" fill="#34A853"/>
+          <ellipse cx="0" cy="-14" rx="5" ry="5" fill="white"/>
+          <text x="0" y="18" font-family="DM Sans,Arial,sans-serif" font-size="10" fill="rgba(255,255,255,0.65)" text-anchor="middle">Hyderabad</text>
+        </g>
+
+        <!-- Chennai -->
+        <g transform="translate(988, 530)">
+          <ellipse cx="0" cy="-12" rx="11" ry="11" fill="#FBBC05"/>
+          <polygon points="0,2 -5,-6 5,-6" fill="#FBBC05"/>
+          <ellipse cx="0" cy="-12" rx="4.5" ry="4.5" fill="white"/>
+          <text x="0" y="16" font-family="DM Sans,Arial,sans-serif" font-size="10" fill="rgba(255,255,255,0.65)" text-anchor="middle">Chennai</text>
+        </g>
+
+        <!-- Kolkata -->
+        <g transform="translate(1072, 330)">
+          <ellipse cx="0" cy="-12" rx="11" ry="11" fill="#4285F4"/>
+          <polygon points="0,2 -5,-6 5,-6" fill="#4285F4"/>
+          <ellipse cx="0" cy="-12" rx="4.5" ry="4.5" fill="white"/>
+          <text x="0" y="16" font-family="DM Sans,Arial,sans-serif" font-size="10" fill="rgba(255,255,255,0.65)" text-anchor="middle">Kolkata</text>
+        </g>
+
+        <!-- Pune -->
+        <g transform="translate(894, 450)">
+          <ellipse cx="0" cy="-10" rx="9" ry="9" fill="#EA4335"/>
+          <polygon points="0,2 -4,-5 4,-5" fill="#EA4335"/>
+          <ellipse cx="0" cy="-10" rx="3.5" ry="3.5" fill="white"/>
+        </g>
+
+        <!-- Jaipur -->
+        <g transform="translate(920, 292)">
+          <ellipse cx="0" cy="-10" rx="9" ry="9" fill="#34A853"/>
+          <polygon points="0,2 -4,-5 4,-5" fill="#34A853"/>
+          <ellipse cx="0" cy="-10" rx="3.5" ry="3.5" fill="white"/>
+        </g>
+
+        <!-- Ahmedabad -->
+        <g transform="translate(868, 358)">
+          <ellipse cx="0" cy="-10" rx="9" ry="9" fill="#FBBC05"/>
+          <polygon points="0,2 -4,-5 4,-5" fill="#FBBC05"/>
+          <ellipse cx="0" cy="-10" rx="3.5" ry="3.5" fill="white"/>
+        </g>
+
+        <!-- Scatter small city dots -->
+        <circle cx="1005" cy="370" r="4" fill="#4A7DDB" opacity="0.7"/>
+        <circle cx="1028" cy="395" r="3.5" fill="#4A7DDB" opacity="0.6"/>
+        <circle cx="1048" cy="455" r="3.5" fill="#4A7DDB" opacity="0.55"/>
+        <circle cx="902" cy="318" r="3.5" fill="#4A7DDB" opacity="0.6"/>
+        <circle cx="955" cy="305" r="3" fill="#4A7DDB" opacity="0.5"/>
+        <circle cx="908" cy="388" r="3" fill="#4A7DDB" opacity="0.5"/>
+        <circle cx="1012" cy="312" r="3" fill="#4A7DDB" opacity="0.45"/>
+        <circle cx="1042" cy="360" r="3" fill="#4A7DDB" opacity="0.45"/>
+        <circle cx="1060" cy="415" r="3.5" fill="#4A7DDB" opacity="0.4"/>
+        <circle cx="968" cy="558" r="3" fill="#4A7DDB" opacity="0.4"/>
+        <circle cx="982" cy="580" r="2.5" fill="#4A7DDB" opacity="0.35"/>
+        <circle cx="848" cy="340" r="3" fill="#4A7DDB" opacity="0.4"/>
+        <circle cx="996" cy="280" r="2.5" fill="#4A7DDB" opacity="0.4"/>
+        <circle cx="1085" cy="370" r="2.5" fill="#4A7DDB" opacity="0.35"/>
+
+        <!-- Coverage label -->
+        <text x="1100" y="570" font-family="DM Sans,Arial,sans-serif" font-size="13" fill="rgba(255,255,255,0.4)" text-anchor="middle">100+ cities · 7 states</text>
+
+        <!-- ── LEFT CONTENT PANEL (text layer inside SVG) ── -->
+
+        <!-- Large brand logo mark in hero -->
+        <g transform="translate(80, 80)">
+          <!-- Pin -->
+          <ellipse cx="40" cy="40" rx="38" ry="38" fill="#1A56DB" opacity="0.18"/>
+          <ellipse cx="40" cy="36" rx="30" ry="30" fill="#1A56DB"/>
+          <polygon points="40,78 26,52 54,52" fill="#1A56DB"/>
+          <ellipse cx="40" cy="36" rx="20" ry="20" fill="white"/>
+          <!-- Google G inside -->
+          <path d="M40 18 A18 18 0 0 1 56 44" stroke="#4285F4" stroke-width="5.5" fill="none" stroke-linecap="round"/>
+          <path d="M40 18 A18 18 0 0 0 22 36" stroke="#EA4335" stroke-width="5.5" fill="none" stroke-linecap="round"/>
+          <path d="M22 36 A18 18 0 0 0 56 44" stroke="#FBBC05" stroke-width="5.5" fill="none" stroke-linecap="round"/>
+          <line x1="46" y1="36" x2="58" y2="36" stroke="#34A853" stroke-width="5.5" stroke-linecap="round"/>
+          <!-- Gold ring -->
+          <ellipse cx="40" cy="36" rx="34" ry="34" fill="none" stroke="#F4A012" stroke-width="2" stroke-dasharray="8 5" opacity="0.6"/>
+        </g>
+
+        <!-- MSME badge -->
+        <rect x="80" y="178" width="288" height="30" rx="15" fill="rgba(244,160,18,0.15)" stroke="#F4A012" stroke-width="1.2"/>
+        <circle cx="100" cy="193" r="6" fill="#F4A012"/>
+        <text x="114" y="198" font-family="Syne,Arial,sans-serif" font-size="12" font-weight="700" fill="#F4A012" letter-spacing="1.5">GOVT. REGISTERED MSME</text>
+
+        <!-- Big headline -->
+        <text x="80" y="268" font-family="Syne,Arial Black,sans-serif" font-size="62" font-weight="800" fill="white">Bridging</text>
+        <text x="80" y="338" font-family="Syne,Arial Black,sans-serif" font-size="62" font-weight="800" fill="white">Businesses &amp;</text>
+        <!-- Google wordmark colors -->
+        <text x="80" y="408" font-family="Syne,Arial Black,sans-serif" font-size="62" font-weight="800">
+          <tspan fill="#4285F4">G</tspan><tspan fill="#EA4335">o</tspan><tspan fill="#FBBC05">o</tspan><tspan fill="#4285F4">g</tspan><tspan fill="#34A853">l</tspan><tspan fill="#EA4335">e</tspan>
+          <tspan fill="rgba(255,255,255,0.5)" font-size="38" dy="8">  Since 2007</tspan>
+        </text>
+
+        <!-- Gold underline -->
+        <rect x="80" y="422" width="360" height="5" rx="2.5" fill="url(#hGold)"/>
+
+        <!-- Subtext -->
+        <text x="80" y="462" font-family="DM Sans,Arial,sans-serif" font-size="18" fill="rgba(255,255,255,0.72)">Founded by Sanjay Paul — Ex-Google Maps India</text>
+        <text x="80" y="485" font-family="DM Sans,Arial,sans-serif" font-size="18" fill="rgba(255,255,255,0.72)">Division (2007 Pilot Batch) · Bengaluru</text>
+
+        <!-- Stat boxes -->
+        <g transform="translate(80, 515)">
+          <rect x="0" y="0" width="110" height="80" rx="10" fill="rgba(26,86,219,0.28)" stroke="rgba(26,86,219,0.55)" stroke-width="1"/>
+          <text x="55" y="35" font-family="Syne,Arial,sans-serif" font-size="28" font-weight="800" fill="#F4A012" text-anchor="middle">15+</text>
+          <text x="55" y="52" font-family="DM Sans,Arial,sans-serif" font-size="11" fill="rgba(255,255,255,0.65)" text-anchor="middle">Years</text>
+          <text x="55" y="66" font-family="DM Sans,Arial,sans-serif" font-size="11" fill="rgba(255,255,255,0.65)" text-anchor="middle">Experience</text>
+        </g>
+        <g transform="translate(202, 515)">
+          <rect x="0" y="0" width="118" height="80" rx="10" fill="rgba(26,86,219,0.28)" stroke="rgba(26,86,219,0.55)" stroke-width="1"/>
+          <text x="59" y="35" font-family="Syne,Arial,sans-serif" font-size="28" font-weight="800" fill="#F4A012" text-anchor="middle">5000+</text>
+          <text x="59" y="52" font-family="DM Sans,Arial,sans-serif" font-size="11" fill="rgba(255,255,255,0.65)" text-anchor="middle">Individuals</text>
+          <text x="59" y="66" font-family="DM Sans,Arial,sans-serif" font-size="11" fill="rgba(255,255,255,0.65)" text-anchor="middle">Guided</text>
+        </g>
+        <g transform="translate(332, 515)">
+          <rect x="0" y="0" width="118" height="80" rx="10" fill="rgba(26,86,219,0.28)" stroke="rgba(26,86,219,0.55)" stroke-width="1"/>
+          <text x="59" y="35" font-family="Syne,Arial,sans-serif" font-size="28" font-weight="800" fill="#F4A012" text-anchor="middle">2000+</text>
+          <text x="59" y="52" font-family="DM Sans,Arial,sans-serif" font-size="11" fill="rgba(255,255,255,0.65)" text-anchor="middle">Businesses</text>
+          <text x="59" y="66" font-family="DM Sans,Arial,sans-serif" font-size="11" fill="rgba(255,255,255,0.65)" text-anchor="middle">Scanned</text>
+        </g>
+        <g transform="translate(462, 515)">
+          <rect x="0" y="0" width="96" height="80" rx="10" fill="rgba(26,86,219,0.28)" stroke="rgba(26,86,219,0.55)" stroke-width="1"/>
+          <text x="48" y="35" font-family="Syne,Arial,sans-serif" font-size="28" font-weight="800" fill="#F4A012" text-anchor="middle">7+</text>
+          <text x="48" y="52" font-family="DM Sans,Arial,sans-serif" font-size="11" fill="rgba(255,255,255,0.65)" text-anchor="middle">States</text>
+          <text x="48" y="66" font-family="DM Sans,Arial,sans-serif" font-size="11" fill="rgba(255,255,255,0.65)" text-anchor="middle">Covered</text>
+        </g>
+
+        <!-- Bottom divider -->
+        <line x1="80" y1="690" x2="620" y2="690" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+      </svg>
+    </div>
+
+    <!-- ── HTML CONTENT OVERLAY (CTAs — interactive elements must be HTML) ── -->
+    <div class="hero-overlay">
+      <div class="hero-ctas-wrap">
         <a href="tel:+917799423794" class="btn btn-primary pulse">📞 Call Now</a>
         <a href="https://lnkd.in/gC463tqg" target="_blank" rel="noopener" class="btn btn-secondary">🔍 Free GBP Audit</a>
+        <a href="https://wa.me/917799423794" target="_blank" rel="noopener" class="btn btn-whatsapp">💬 WhatsApp</a>
       </div>
-
-      <!-- Stats Row -->
-      <div class="hero-stats">
-        <div class="stat">
-          <span class="stat-num">15+</span>
-          <span class="stat-label">Years Experience</span>
-        </div>
-        <div class="stat">
-          <span class="stat-num">5000+</span>
-          <span class="stat-label">Individuals Guided</span>
-        </div>
-        <div class="stat">
-          <span class="stat-num">2000+</span>
-          <span class="stat-label">Businesses Scanned</span>
-        </div>
-        <div class="stat">
-          <span class="stat-num">7+</span>
-          <span class="stat-label">States Covered</span>
-        </div>
-      </div>
-
-      <!-- MSME Trust Badge -->
-      <div class="msme-badge">
-        <span class="msme-icon">🏛️</span>
-        <span>GOVT. REGISTERED MSME</span>
+      <div class="hero-dir-link">
+        <a href="https://www.justdial.com/Bangalore/S-P-Digital-Journey-Behind-Acharya-Institute-Of-Graduate-Studies-Achitnagar/080PXX80-XX80-251222200406-M9K1_BZDET"
+           target="_blank" rel="noopener">📒 View on JustDial →</a>
       </div>
     </div>
 
-    <!-- Local Directory Trust Link -->
-    <div class="hero-directory">
-      <a href="https://www.justdial.com/Bangalore/S-P-Digital-Journey-Behind-Acharya-Institute-Of-Graduate-Studies-Achitnagar/080PXX80-XX80-251222200406-M9K1_BZDET"
-         target="_blank" rel="noopener">
-        📒 View on JustDial Directory →
-      </a>
-    </div>
   </section>
 
   <!-- ================================================
